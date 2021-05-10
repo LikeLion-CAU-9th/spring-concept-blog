@@ -35,3 +35,16 @@ def new_post(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, id = pk)
     return render(request, 'postDetail.html', {"post": post})
+
+
+def post_update(request, pk):
+    post = Post.objects.get(id = pk)
+
+    if request.method == "POST":
+        post.title = request.POST['title']
+        post.body = request.POST['body']
+        post.image = request.FILES.get('image')
+        post.save()
+        return redirect('/post/'+str(post.id))
+    else:
+        return render(request, 'editPost.html', {"post": post})
