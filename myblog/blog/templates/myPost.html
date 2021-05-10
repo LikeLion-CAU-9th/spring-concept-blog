@@ -1,33 +1,76 @@
 {% extends 'base.html' %}
 
 {% block mainContent %}
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
+<div class = "post-align" style = "margin:100px 0 0 0">
+<button type="button" class="btn btn-primary"
+    style="background-color:pink; border: None; float: right; margin:50px 50px 100px 0" data-bs-toggle="modal"
+    data-bs-target="#exampleModal" data-bs-whatever="@mdo">새글 쓰기</button>
 </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="qlogo">
+        <div class="poziomq">
+            <figure class="liscie">
+                <span class="lisc-lewy"><span class="after"></span></span>
+                <span class="lisc-lewy drugi"><span class="after"></span></span>
+                <span class="lisc-prawy"><span class="after"></span></span>
+                <span class="lisc-prawy drugi"><span class="after"></span></span>
+                <span class="lodyga"></span>
+            </figure>
+            <figure class="rece">
+                <span class="reka reka-lewa"></span>
+                <span class="reka reka-prawa"></span>
+            </figure>
+            <figure class="cialo">
+                <span class="twarz">
+                    <span class="oczy">
+                        <span class="oko oko-lewe"></span>
+                        <span class="oko oko-prawe"></span>
+                    </span>
+                    <span class="piegi">
+                        <span class="pieg pieg-lewy"></span>
+                        <span class="pieg pieg-prawy"></span>
+                    </span>
+                    <span class="buzia">
+                        <span class="gardlo"></span>
+                        <span class="zuby"></span>
+                    </span>
+                </span>
+            </figure>
+            <figure class="nogi">
+                <span class="noga-lewa"></span>
+                <span class="noga-prawa"></span>
+            </figure>
+        </div>
+
+        <figure class="cien"></figure>
+        <figure class="tekst"> 글이 없어요 ㅠㅠ</figure>
+    </div>
+    ㅇㄴㄹㅇㄴㄹ
 
 {% endblock %}

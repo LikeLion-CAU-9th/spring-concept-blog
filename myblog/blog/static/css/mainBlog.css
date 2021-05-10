@@ -61,12 +61,14 @@ hr {
     border: 2px solid gray;
 }
 
-.post-header {
+.post-header span{
     background: #fff;
     position: relative;
     padding: 3rem 5%;
     font-family: 'Sucrose Bold Two';
     font-size: 2.7rem;
+    display : inline;
+
 }
 
 .point-color {
