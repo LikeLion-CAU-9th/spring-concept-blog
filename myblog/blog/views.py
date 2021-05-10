@@ -12,7 +12,7 @@ def my_post(request):
 
 def new_post(request):
     if request.method == 'POST':
-        if request.FILES['image']:
+        if request.FILES.get('image'):
             print(request.FILES)
             a = Post.objects.create(
                 title=request.POST['title'],
@@ -25,7 +25,6 @@ def new_post(request):
             new_article=Post.objects.create(
                 title=request.POST['title'],
                 body=request.POST['body'],
-                image=request.FILES['post-image']
             )
             print("b")
         post_list = Post.objects.all()

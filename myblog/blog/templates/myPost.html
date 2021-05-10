@@ -37,6 +37,7 @@
         </div>
     </div>
 </div>
+{% if post_list|length == 0 %}
 <div id="qlogo">
     <div class="poziomq">
         <figure class="liscie">
@@ -75,6 +76,7 @@
     <figure class="cien"></figure>
     <figure class="tekst"> 글이 없어요 ㅠㅠ</figure>
 </div>
+{% endif %}
 <div class="band">
     {% for post in post_list %}
     <div class="item-2">
