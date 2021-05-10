@@ -1,5 +1,3 @@
-https://img.shields.io/github/forks/LikeLion-CAU-9th/spring-concept-blog
-
 # Spring concept blog
 - Django practice를 위한 `Likelion` blog 예제입니다.
 
