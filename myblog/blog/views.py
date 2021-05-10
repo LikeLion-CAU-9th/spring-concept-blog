@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from blog.models import Post
 
 
@@ -31,3 +31,7 @@ def new_post(request):
         return render(request, 'myPost.html', {"post_list" : post_list})
     print("a")
     return redirect('/')
+
+def post_detail(request, pk):
+    post = get_object_or_404(Post, id = pk)
+    return render(request, 'postDetail.html', {"post": post})
