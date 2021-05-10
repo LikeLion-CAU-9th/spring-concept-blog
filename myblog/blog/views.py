@@ -10,6 +10,7 @@ def my_post(request):
     post_list = Post.objects.all()
     return render(request, 'myPost.html', {"post_list" : post_list})
 
+
 def new_post(request):
     if request.method == 'POST':
         if request.FILES.get('image'):
@@ -32,6 +33,7 @@ def new_post(request):
     print("a")
     return redirect('/')
 
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, id = pk)
     return render(request, 'postDetail.html', {"post": post})
@@ -48,3 +50,9 @@ def post_update(request, pk):
         return redirect('/post/'+str(post.id))
     else:
         return render(request, 'editPost.html', {"post": post})
+
+
+def post_delete(request, pk):
+    post = Post.objects.get(id = pk)
+    post.delete()
+    return redirect('/my-post')

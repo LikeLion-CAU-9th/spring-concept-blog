@@ -4,7 +4,7 @@
 <div class="my-post-align">
             </div>
     <main>
-            <a type="button" class="btn btn-primary"
+            <a type="button"  href = "{% url 'post-delete' post.id %}" class="btn btn-primary"
             style="background-color:pink; border: None; margin:20px 20px 0 0;float: right; ">삭제하기</a>
 
             <a type="button" href = "{% url 'post-edit' post.id %}"class="btn btn-primary"
