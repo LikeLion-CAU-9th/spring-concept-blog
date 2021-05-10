@@ -1,311 +1,165 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- custom css -->
-    <link rel="stylesheet" href="{% static 'css/springFall.css' %}">
-    <link rel="stylesheet" href="{% static 'css/card.css' %}">
-    <link rel="stylesheet" href="{% static 'css/mainBlog.css' %}">
-    <link rel="stylesheet" href="{% static 'css/blogNavbar.css' %}">
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'css/dog.css' %}">
-
-
-    <title>LikeLion's Blog</title>
-</head>
-
-<body>
-    <div class="main-container">
-        <!-- navbar 
-            navbar 관련 코드 파트 입니다.
-            - <a> tag 안에 지정한 url을 넣어주시면 됩니다.
-            - 각각 data-hover 를 주고 있기 때문에 hover effect를 넣어주시고 싶으시다면 넣어주시기 바랍니다.
-         -->
-        <ul class="menu">
-            <li class="menu__item">
-                <a href="#" class="menu__link">
-                    <span class="menu__title">
-                        <span class="menu__first-word" data-hover="Main">
-                            Main
-                        </span>
-                        <span class="menu__second-word" data-hover="Home">
-                            Home
-                        </span>
-                    </span>
-                </a>
-            </li>
-
-            <li class="menu__item">
-                <a href="#" class="menu__link">
-                    <span class="menu__title">
-                        <span class="menu__first-word" data-hover="My">
-                            My
-                        </span>
-                        <span class="menu__second-word" data-hover="Post">
-                            Post
-                        </span>
-                    </span>
-                </a>
-            </li>
-
-            <li class="menu__item">
-                <a href="#" class="menu__link">
-                    <span class="menu__title">
-                        <span class="menu__first-word" data-hover="Communication">
-                            Communication
-                        </span>
-                        <span class="menu__second-word" data-hover="Board">
-                            Board
-                        </span>
-                    </span>
-                </a>
-            </li>
-
-            <li class="menu__item">
-                <a href="#" class="menu__link">
-                    <span class="menu__title">
-                        <span class="menu__first-word" data-hover="Introduce">
-                            Introduce
-                        </span>
-                        <span class="menu__second-word" data-hover="Me">
-                            Me
-                        </span>
-                    </span>
-                </a>
-            </li>
-
-            <li class="menu__item">
-                <a href="#" class="menu__link">
-                    <span class="menu__title">
-                        <span class="menu__first-word" data-hover="Call">
-                            Call
-                        </span>
-                        <span class="menu__second-word" data-hover="Me">
-                            Me
-                        </span>
-                    </span>
-                </a>
-            </li>
-        </ul>
-
-        <!-- main header -->
-        <div class="header">
-            <h1>Story <span>of the</span> Spring</h1>
+{% block mainHeader %}
+<!-- main header -->
+<div class="header">
+    <h1>Story <span>of the</span> Spring</h1>
+</div>
+<div class="dog">
+    <div class="heart heart--1"></div>
+    <div class="heart heart--2"></div>
+    <div class="heart heart--3"></div>
+    <div class="heart heart--4"></div>
+    <div class="head">
+        <div class="year year--left"></div>
+        <div class="year year--right"></div>
+        <div class="nose"></div>
+        <div class="face">
+            <div class="eye eye--left"></div>
+            <div class="eye eye--right"></div>
+            <div class="mouth"></div>
         </div>
-        <div class="dog">
-                <div class="heart heart--1"></div>
-                <div class="heart heart--2"></div>
-                <div class="heart heart--3"></div>
-                <div class="heart heart--4"></div>
-                <div class="head">
-                    <div class="year year--left"></div>
-                    <div class="year year--right"></div>
-                    <div class="nose"></div>  
-                  <div class="face">
-                    <div class="eye eye--left"></div>
-                    <div class="eye eye--right"></div>
-                    <div class="mouth"></div>
-                  </div>
-                </div>
-                <div class="body">
-                  <div class="cheast"></div>
-                  <div class="back"></div>
-                  <div class="legs">
-                    <div class="legs__front legs__front--left"></div>
-                    <div class="legs__front legs__front--right"></div>
-                    <div class="legs__back legs__back--left"></div>
-                    <div class="legs__back legs__back--right"></div>
-                  </div>
-                  <div class="tail"></div>
-                </div>
-              </div>
+    </div>
+    <div class="body">
+        <div class="cheast"></div>
+        <div class="back"></div>
+        <div class="legs">
+            <div class="legs__front legs__front--left"></div>
+            <div class="legs__front legs__front--right"></div>
+            <div class="legs__back legs__back--left"></div>
+            <div class="legs__back legs__back--right"></div>
+        </div>
+        <div class="tail"></div>
+    </div>
+</div>
 
-        <main>
-            <!-- Main description
+<main>
+    <!-- Main description
                 Blog identity를 적는 공간입니다. 
              -->
-            <p>
-                <h1>oereo's blog</h1>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </main>
+    <p>
+        <h1>oereo's blog</h1>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+        software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+</main>
+{% endblock %}
 
-        <div class="support-grid"></div>
+{% block mainContent %}
+<div class="support-grid"></div>
 
-        <!-- Sub header 
+<!-- Sub header 
             - Main page에 보여질 컨텐츠의 제목을 적는 공간입니다.
             - point color는 pink 입니다.
         -->
-        <div class="post-header">
-            <span class="point-color">M</span>y <span class="point-color">P</span>ost
-        </div>
+<div class="post-header">
+    <span class="point-color">M</span>y <span class="point-color">P</span>ost
+</div>
 
-        <!-- My post 
+<!-- My post 
             블로그 주인이 작성한 게시물들이 올라오는 공간입니다. 최신순으로 3개까지 노출이 되도록 합니다.    
          -->
-        <div class="band">
-            <div class="item-1">
-                <a href="" class="card">
-                    <div class="thumb"
-                        style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);">
-                    </div>
-                    <article>
-                        <h1>오늘 하루 개발일지!! : AWS편</h1>
-                        <p>AWS SMS와 Firebase를 이용해서 push 기능을 만들어보자.</p>
-                        <span>2021년 04월 20일</span>
-                    </article>
-                </a>
+<div class="band">
+    <div class="item-1">
+        <a href="" class="card">
+            <div class="thumb"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);">
             </div>
-            <div class="item-2">
-                <a href="" class="card">
-                    <div class="thumb"
-                        style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png);">
-                    </div>
-                    <article>
-                        <h1>Github 활용법</h1>
-                        <p>Github 관리 어떻게 하면 좋을까?</p>
-                        <span>2021년 03월 02일</span>
-                    </article>
-                </a>
+            <article>
+                <h1>오늘 하루 개발일지!! : AWS편</h1>
+                <p>AWS SMS와 Firebase를 이용해서 push 기능을 만들어보자.</p>
+                <span>2021년 04월 20일</span>
+            </article>
+        </a>
+    </div>
+    <div class="item-2">
+        <a href="" class="card">
+            <div class="thumb"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png);">
             </div>
-            <div class="item-3">
-                <a href="" class="card">
-                    <div class="thumb"
-                        style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);">
-                    </div>
-                    <article>
-                        <h1>Django 기본편 1</h1>
-                        <p>CRUD에 대해서 공부해보자! </p>
-                        <span>2021년 01월 30일</span>
-                    </article>
-                </a>
+            <article>
+                <h1>Github 활용법</h1>
+                <p>Github 관리 어떻게 하면 좋을까?</p>
+                <span>2021년 03월 02일</span>
+            </article>
+        </a>
+    </div>
+    <div class="item-3">
+        <a href="" class="card">
+            <div class="thumb"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);">
             </div>
-        </div>
+            <article>
+                <h1>Django 기본편 1</h1>
+                <p>CRUD에 대해서 공부해보자! </p>
+                <span>2021년 01월 30일</span>
+            </article>
+        </a>
+    </div>
+</div>
 
-        <div class="post-header">
-            <br>
-            <span class="point-color">C</span>ommunication <span class="point-color">B</span>oard
-        </div>
+<div class="post-header">
+    <br>
+    <span class="point-color">C</span>ommunication <span class="point-color">B</span>oard
+</div>
 
-        <!-- Coummunication Board 
+<!-- Coummunication Board 
             - 블로그에 들어온 사람이 자유롭게 적은 게시글들이 올라오는 공간입니다.
          -->
-        <div class="band">
-            <div class="item-4">
-                <a href="" class="card">
-                    <div class="thumb"
-                        style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/landing.png);">
-                    </div>
-                    <article>
-                        <h1>나는 누구일까?</h1>
-                        <p>나는 꿀꿀이기 전에 꿀꿀이었나..</p>
-                        <span>작성자 : 인세훈</span>
-                    </article>
-                </a>
+<div class="band">
+    <div class="item-4">
+        <a href="" class="card">
+            <div class="thumb"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/landing.png);">
             </div>
-            <div class="item-5">
-                <a href="" class="card">
-                    <div class="thumb"
-                        style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/strange.jpg);">
-                    </div>
-                    <article>
-                        <h1>나는 무엇을 좋아하나</h1>
-                        <p>꿀꿀이니까 먹는 것을 좋아하나.</p>
-                        <span>작성자 : 왕꿀꿀</span>
-                    </article>
-                </a>
-            </div>
-            <div class="item-6">
-                <a href="" class="card">
-                    <div class="thumb"
-                        style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg);">
-                    </div>
-                    <article>
-                        <h1>나는 지금 무엇을 하고 있는가</h1>
-                        <p>꿀꿀이니까 먹는 것을 만들고 있는 중인가.</p>
-                        <span>작성자 : 김꿀꿀</span>
-                    </article>
-                </a>
-            </div>
-            <div class="item-7">
-                <a href="" class="card">
-                    <div class="thumb"
-                        style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/china.png);">
-                    </div>
-                    <article>
-                        <h1>팀 스터디 구합니다!!</h1>
-                        <p>자격조건 : 잘 먹는 사람</p>
-                        <span>작성자 : 옹꿀꿀꿀</span>
-                    </article>
-                </a>
-            </div>
-        </div>
-        <br>
-        <br>
-    
-        <footer>
-                <ul>
-                    <li>
-                        <div class="icon" data-icon="L"></div>
-                        <div class="text">
-                            <h4><span class = "footer-point-color">A</span>bout</h4>
-                            <div>중앙대학교 멋쟁이 사자차럼 9기에서 만들고 있는 개인 블로그 입니다.<br><a
-                                    href="#">  Read more </a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon" data-icon="a"></div>
-                        <div class="text">
-                            <h4><span class = "footer-point-color">CAU</span> Like<span class = "footer-point-color">L</span>ion</h4>
-                            <div>프로그래밍을 통해 세상에 필요한 서비스와 가치를 만드는 동아리 입니다.<br>
-                                <a href="#">  Read more</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon" data-icon="I"></div>
-                        <div class="text">
-                            <h4><span class = "footer-point-color">S</span>KILL</h4>
-                            <div>
-                                    <div>Django</div>
-                                    <div>Python</div>
-                                    <div>HTML</div>
-                                    <div>CSS</div>
-                                    <div>JS</div>
-                                <a
-                                    href="#">  Read more</a></div>
-                        </div>
-                    </li>
-                </ul>
-        
-                <div class="bar">
-                    <div class="bar-wrap">
-                        <div class="clear"></div>
-                        <div class="copyright">&copy; OEREO 2021 All Rights Reserved.</div>
-                    </div>
-                </div>
-            </footer>
+            <article>
+                <h1>나는 누구일까?</h1>
+                <p>나는 꿀꿀이기 전에 꿀꿀이었나..</p>
+                <span>작성자 : 인세훈</span>
+            </article>
+        </a>
     </div>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        $(window).load(function () {
-            $('body').sakura();
-        });
-    </script>
-</body>
-<!-- Sakura Effect 
-    - 벚꽃이 떨어지는 효과를 주기 위한 js 파일입니다.
- -->
-<script src="../static/js/sakuraEffect.js"></script>
-
-</html>
+    <div class="item-5">
+        <a href="" class="card">
+            <div class="thumb"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/strange.jpg);">
+            </div>
+            <article>
+                <h1>나는 무엇을 좋아하나</h1>
+                <p>꿀꿀이니까 먹는 것을 좋아하나.</p>
+                <span>작성자 : 왕꿀꿀</span>
+            </article>
+        </a>
+    </div>
+    <div class="item-6">
+        <a href="" class="card">
+            <div class="thumb"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg);">
+            </div>
+            <article>
+                <h1>나는 지금 무엇을 하고 있는가</h1>
+                <p>꿀꿀이니까 먹는 것을 만들고 있는 중인가.</p>
+                <span>작성자 : 김꿀꿀</span>
+            </article>
+        </a>
+    </div>
+    <div class="item-7">
+        <a href="" class="card">
+            <div class="thumb"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/china.png);">
+            </div>
+            <article>
+                <h1>팀 스터디 구합니다!!</h1>
+                <p>자격조건 : 잘 먹는 사람</p>
+                <span>작성자 : 옹꿀꿀꿀</span>
+            </article>
+        </a>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}
