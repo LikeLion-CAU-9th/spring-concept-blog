@@ -1,3 +1,11 @@
+![](https://img.shields.io/badge/django-3.2.2-green)
+![](https://img.shields.io/badge/HTML-red)
+![](https://img.shields.io/badge/JavaScript-yellow)
+![](https://img.shields.io/badge/CSS-brightgreen)
+![](https://img.shields.io/github/license/LikeLion-CAU-9th/spring-concept-blog)
+
+
+
 # Spring concept blog
 - Django practice를 위한 `Likelion` blog 예제입니다.
 
