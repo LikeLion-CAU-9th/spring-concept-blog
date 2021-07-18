@@ -56,3 +56,7 @@ def post_delete(request, pk):
     post = Post.objects.get(id = pk)
     post.delete()
     return redirect('/my-post')
+
+
+def funcname(self, parameter_list):
+    raise NotImplementedError
