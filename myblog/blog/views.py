@@ -59,4 +59,7 @@ def post_delete(request, pk):
 
 
 def funcname(self, parameter_list):
+    try:
+        Post.objects.filter(parameter_list)
     raise NotImplementedError
+
