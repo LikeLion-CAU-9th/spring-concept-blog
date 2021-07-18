@@ -58,5 +58,5 @@ def post_delete(request, pk):
     return redirect('/my-post')
 
 
-def funcname(self, parameter_list):
-    raise NotImplementedError
+def test_blog(request):
+    return redirect('likelion9th.org')
